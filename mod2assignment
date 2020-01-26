@@ -1,0 +1,18 @@
+> assignment2 <- c(16, 18, 14, 22, 27, 17, 19, 17, 17, 22, 20, 22)
+> myMean <- function(assignment2) { return(sum(assignment)/length(someData)) } 
+> myMean
+function(assignment2) { return(sum(assignment)/length(someData)) }
+
+> myMean(assignment2)
+Error in myMean(assignment2) : object 'assignment' not found 
+
+----------------------------------------------------------------------------
+
+ 
+
+The error is due to the argument 'assignment2' being different from those in the function definition ' return(sum(assignment)/length(someData)) '. To return the arithmetic mean, which I'm assuming is expected of myMean, the arguments in the function definition need to match the argument in the call to function. A working example follows:
+
+
+> myMean <- function(assignment) { return(sum(assignment)/length(assignment)) } 
+> myMean(assignment2)
+[1] 19.25
