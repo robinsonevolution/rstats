@@ -1,0 +1,8 @@
+Assignment.6.Dataset <- read.csv(filepath)
+gradeDF <- Assignment.6.Dataset
+
+student_gendered_average <- ddply(gradeDF,"Sex",transform,Grade.Average=mean(Grade))
+
+i_students <- subset(student_gendered_average, grepl("i", student_gendered_average$Name, ignore.case=T))
+
+write.csv(i_students,file = filepath)
