@@ -1,0 +1,22 @@
+paulsen <- read.csv("C:/Users/cupro/Downloads/paulsen.csv")
+View(paulsen)
+d<-paulsen
+
+max_num <- round(max(d$y))
+max_num <- round(max_num)
+
+hist(d$y, col="lightblue", breaks=max_num, xlim=c(0,max_num), right=F, main="Current Flow through Individual Brain Cells", las=1,prob=TRUE)
+
+lines(density(d$y))
+
+###############################################################################
+
+install.packages("lattice")
+library("lattice")
+densityplot(d$y, xlab="pA")
+
+###############################################################################
+
+install.packages("tidyverse")
+library("ggplot2")
+ggplot(d, aes(x = y)) + geom_histogram(aes(y = ..density..), binwidth = 0.5, col="red", fill="green", alpha = .2) + geom_density()+labs(x="pA", y="Freq")+labs(title = "Frequencies of Measured Currents")
