@@ -1,0 +1,13 @@
+Package: meddiapro
+Type: Package
+Title: Associate patient medical data with potential diagnoses and prognoses
+Version: 0.0.0.9000
+Author: Jesse Robinson
+Maintainer: Jesse Robinson <jrobinson5@usf.edu> [aut, cre]
+Description: Associates patient medical data, e.g. blood pressure etc., and
+    commpares to historical data for determining associated diagnoses and
+    prognoses. May be used with monitoring devices such as pacemakers.
+Depends: 1.2.5033
+License: CCO
+Encoding: UTF-8
+LazyData: true
