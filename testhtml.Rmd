@@ -1,0 +1,60 @@
+---
+title: "Molecular Evolution"
+author: "Jesse Robinson"
+date: "4/13/2020"
+output:
+  html_document:
+    theme: readable
+ 
+---
+<style>
+.quotes {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+```
+
+## R Markdown 
+
+From RStudio defaults when opening a new R Markdown:
+<div class="quotes"><blockquote>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk with Ctrl+Alt+I.</blockquote></div>
+
+R Markdown uses HTML and CSS encodings for styling. There are default themes that can be used to style an HTML document, or you can use your own custom CSS style. For a custom style you have to set both the theme and highlight to <i>null</i>. To learn more about these as well as other languages, see <https://www.w3schools.com/html/default.asp>.
+
+
+
+## <h style="font-size:100%;">Code Chunks</h>
+Code chunks are sections in your Markdown document that will execute code in the R language or other languages (see below), providing the output that can be displayed while editing the document and for the final rendering of the document. By default a code chunks header is set to display its code, i.e. echo=TRUE. To prevent the display of code when rendering the document, set echo=FALSE. Alternatively you can use inline code outside of the chunk, and the code will be ran and the output displayed without the code. However, inline code does not take Knitr options.
+
+## Executing Code in Other Languages
+
+Knitr is able to execute code from other languages including Python, SQL, bash, and JavaScript among others. A list of other languages and information pertaining to how Knitr executes the relevant code can be found at <https://bookdown.org/yihui/rmarkdown/language-engines.html>.
+
+## Tables, Dataframes, and Matrices
+An example table is presented below with the default Markdown document executed and displayed using a code chunk.
+
+```{r cars}
+summary(cars)
+```
+
+## Tabs are easily made using the tabset headers
+Note the use of triple #'s in the editor to indicate a tab.
+
+## Health Records {.tabset .tabset-fade}
+
+### Alcohol Conumption
+```{r echo=FALSE, results='asis'}
+plot(esoph$agegp,esoph$alcgp,xlab="Age Group",ylab="Alcohol Consumption")
+```
+
+
+### Vitals
+(Vitals here)
