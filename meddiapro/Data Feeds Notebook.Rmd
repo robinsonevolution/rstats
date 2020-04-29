@@ -1,0 +1,19 @@
+---
+title: "meddiapro Package"
+output: html_notebook
+---
+Keywords: Cancer, Pathology, Genomics, Survival rates 
+```{r, echo=FALSE}
+install.packages("survival")
+```
+
+This document details the format of data to be aggregated and/or used in analyses executed by the R meddiapro package.
+
+##National Cancer Institute (NCI), The Cancer Genome Atlas (TCGA) data sources
+<https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/using-tcga/tools>
+
+
+##FirebrowseR
+
+FirebrowseR is a R API that pulls data from TCGA/Firehose directly into R in either JSON, CSV, or TSV format. <https://github.com/mariodeng/FirebrowseR>
+
